@@ -23,7 +23,7 @@ The two bonds selected from NSE was -
 [Libraries Used](https://github.com/tuhinbasu/Project_Bonds/blob/main/requirements.txt)
 
 ## Project Architecture
-![alt text](https://github.com/tuhinbasu/Project_Bonds/blob/main/project_arch.PNG)
+![alt text](https://github.com/tuhinbasu/Project_Bonds/blob/main/img/project_arch.PNG)
 
 ## Explaining Project Architecture
 ### Live data extraction
