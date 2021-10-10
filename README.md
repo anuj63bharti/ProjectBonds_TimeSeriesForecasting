@@ -35,7 +35,8 @@ When data is then called back by the python. the python then perform differencin
 #### p,d,q Hyperparameters
 We use auto_arima function to calculate p,d,q value. We use re(regex) to store the summary of auto_arima in string format. then use "re.findall()" funtion to collect the value of p,d,q values. The downpoint of using this auto_arima function is that it runs two times when the programes gets executed. It calculate the hyperparameter values for both SGB and IRFC data.
 ### ARIMA
-This part is where the data is taken and then fit & predict.
+This part is where the data is taken and then fit & predict.<br>
+This is for 12 months.
 ![Actual Data vs Predicted Data](https://github.com/tuhinbasu/Project_Bonds/blob/main/img/actualvspred.PNG)
 ### Model Evaluation
 #### SGB
@@ -43,7 +44,16 @@ The RMSE: 93.27 Rs. & The MAPE: 0.0185
 #### IRFC
 The RMSE: 21.62 Rs. & The MAPE: 0.0139<br>
 (Pretty Good)
-### Forecating
+### Forecasting (12 Months)
+![Forecasted Data (12 Months)](https://github.com/tuhinbasu/Project_Bonds/blob/main/img/forecast.PNG)
+### Returns
+This is the part where both SGB and IRFC foecasted data is being collected and based on that returns are calculated. If the SGB returns is higher than IRFC bonds then it will tell the customer about the amount of return for a specific time period.
+### User Input
+The user will be given 3 options as Input. The user will select a specific time period from a drop down list. The options are -<br>
+1. 4 Months (Quaterly)<br>
+2. 6 Months (Half yearly)<br>
+3. 12 Months (Anually)<br>
+This options are time pperiod to forecast. If the user press 6 then the output page will show "6" forecasted values with a range Upper Price, Forecasted Price, Lower Price for both the bonds side by side. Below there will be a text where the returns will be diplayed if the user decides to sell the bonds then.
 
 ## Setup
 To run this project, install it locally using npm:
