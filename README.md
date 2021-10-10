@@ -53,7 +53,11 @@ The user will be given 3 options as Input. The user will select a specific time 
 1. 4 Months (Quaterly)<br>
 2. 6 Months (Half yearly)<br>
 3. 12 Months (Anually)<br>
-This options are time pperiod to forecast. If the user press 6 then the output page will show "6" forecasted values with a range Upper Price, Forecasted Price, Lower Price for both the bonds side by side. Below there will be a text where the returns will be diplayed if the user decides to sell the bonds then.
+This options are time pperiod to forecast. If the user press 6 then the output page will show "6" forecasted values with a range Upper Price, Forecasted Price, Lower Price for both the bonds side by side. Below there will be a text where the returns will be diplayed if the user decides to sell the bonds then.<br>
+
+
+
+
 
 ## Setup
 To run this project, install it locally using npm:
