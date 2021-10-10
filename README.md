@@ -15,7 +15,7 @@ This project is simple Forecasting model. Not taxes were put into use when calcu
 Inflation rate and global pandemic situation is a rare phenonmenon and it is beyond anyone's control. It has been taken into business restriction.
 
 ## Requirement file (contains version of libraries)
-[Libraries Used](your-project-name/tree/master/your-subfolder)
+[Libraries Used](https://github.com/tuhinbasu/Project_Bonds/blob/main/requirements.txt)
 
 ## Technologies
 Project is created with:
