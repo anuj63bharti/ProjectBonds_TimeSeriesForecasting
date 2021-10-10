@@ -26,7 +26,7 @@ The two bonds selected from NSE was -
 ![alt text](https://github.com/tuhinbasu/Project_Bonds/blob/main/project_arch.PNG)
 
 ## Explaining Project Architecture
-### Live data extraion
+### Live data extraction
 The data collected from NSE website (historical data) and the library which is used to collect live daily data from the website is [nsepy](https://nsepy.xyz/). The data is then goes to python, two things happens in python. First, out of all the attributes, we only take "Close Price" and then the daily is then converted into monthly data. We use mean to calculate the the monthly average.
 ### Data storage in sqlite 
 We chose SQLite because it is very easy to use and one does not need the knowledge of sql to observe the data. the database is created locally and and is being updated when the user usses the application. the user can easliy take the database and see the data in SQL viewr online available.
@@ -36,7 +36,14 @@ When data is then called back by the python. the python then perform differencin
 We use auto_arima function to calculate p,d,q value. We use re(regex) to store the summary of auto_arima in string format. then use "re.findall()" funtion to collect the value of p,d,q values. The downpoint of using this auto_arima function is that it runs two times when the programes gets executed. It calculate the hyperparameter values for both SGB and IRFC data.
 ### ARIMA
 This part is where the data is taken and then fit & predict.
-![alt text](https://github.com/tuhinbasu/Project_Bonds/blob/main/project_arch.PNG)
+![Actual Data vs Predicted Data](https://github.com/tuhinbasu/Project_Bonds/blob/main/img/actualvspred.PNG)
+### Model Evaluation
+#### SGB
+The RMSE: 93.27 Rs. & The MAPE: 0.0185
+#### IRFC
+The RMSE: 21.62 Rs. & The MAPE: 0.0139<br>
+(Pretty Good)
+### Forecating
 
 ## Setup
 To run this project, install it locally using npm:
