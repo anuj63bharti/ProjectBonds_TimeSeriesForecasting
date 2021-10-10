@@ -12,14 +12,32 @@ The 2008-09 global financial crises and 2020-21 pandemic have shown us the volat
 
 ## General info
 This project is simple Forecasting model. Not taxes were put into use when calculating returns. IRFC Bond is a tax free bond but SGB we need to pay taxes if we try to sell it before the maturity period is over.
-Inflation rate and global pandemic situation is a rare phenonmenon and it is beyond anyone's control. It has been taken into business restriction.
+Inflation rate and global pandemic situation is a rare phenonmenon and it is beyond anyone's control. It has been taken into business restriction.<br>
+Data has been collected from [National Stock exchange of India](https://www1.nseindia.com/index_nse.htm)
+The two bonds selected from NSE was -
+* [Indian Railway Finance Corporation Limited Bond (IRFC)](https://www1.nseindia.com/live_market/dynaContent/live_watch/get_quote/GetQuote.jsp?symbol=IRFC&series=N2)
+* [Sovereign Gold Bonds(SGBAUG24)](https://www1.nseindia.com/live_market/dynaContent/live_watch/get_quote/GetQuote.jsp?symbol=SGBAUG24&illiquid=0&smeFlag=0&itpFlag=0)
+
 
 ## Requirement file (contains libraries and their versions)
 [Libraries Used](https://github.com/tuhinbasu/Project_Bonds/blob/main/requirements.txt)
 
-![alt text](http://url/to/img.png)
+## Project Architecture
+![alt text](https://github.com/tuhinbasu/Project_Bonds/blob/main/project_arch.PNG)
 
-	
+## Explaining Project Architecture
+### Live data extraion
+The data collected from NSE website (historical data) and the library which is used to collect live daily data from the website is [nsepy](https://nsepy.xyz/). The data is then goes to python, two things happens in python. First, out of all the attributes, we only take "Close Price" and then the daily is then converted into monthly data. We use mean to calculate the the monthly average.
+### Data storage in sqlite 
+We chose SQLite because it is very easy to use and one does not need the knowledge of sql to observe the data. the database is created locally and and is being updated when the user usses the application. the user can easliy take the database and see the data in SQL viewr online available.
+### Data is then used by the model
+When data is then called back by the python. the python then perform differencing method to remove the trend and seasonality from the data so that our data can be stable. For successful forecasting, it is necessary to keepp the time series data to be stationary.
+#### p,d,q Hyperparameters
+We use auto_arima function to calculate p,d,q value. We use re(regex) to store the summary of auto_arima in string format. then use "re.findall()" funtion to collect the value of p,d,q values. The downpoint of using this auto_arima function is that it runs two times when the programes gets executed. It calculate the hyperparameter values for both SGB and IRFC data.
+### ARIMA
+This part is where the data is taken and then fit & predict.
+![alt text](https://github.com/tuhinbasu/Project_Bonds/blob/main/project_arch.PNG)
+
 ## Setup
 To run this project, install it locally using npm:
 
