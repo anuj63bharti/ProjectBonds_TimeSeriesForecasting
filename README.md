@@ -329,11 +329,12 @@ def output_(x,y,t):
 output_(gain_sgb,gain_bond, n)
 ```
 ## Home Page (Used HTML and CSS)
-![home](https://github.com/tuhinbasu/Project_Bonds/blob/main/img/forecastedprice.PNG)
+![home](https://github.com/tuhinbasu/Project_Bonds/blob/main/img/Home.png)
 
 ## Predict Page
-![predict](https://github.com/tuhinbasu/Project_Bonds/blob/main/img/forecastedprice.PNG)
+![predict](https://github.com/tuhinbasu/Project_Bonds/blob/main/img/input.png)
 
 ## Output Page
-![output](https://github.com/tuhinbasu/Project_Bonds/blob/main/img/forecastedprice.PNG)
+![output](https://github.com/tuhinbasu/Project_Bonds/blob/main/img/output.png)
 
+###Project Completed --
