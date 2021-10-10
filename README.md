@@ -55,6 +55,7 @@ The user will be given 3 options as Input. The user will select a specific time 
 3. 12 Months (Anually)<br>
 This options are time pperiod to forecast. If the user press 6 then the output page will show "6" forecasted values with a range Upper Price, Forecasted Price, Lower Price for both the bonds side by side. Below there will be a text where the returns will be diplayed if the user decides to sell the bonds then.<br>
 
+![alt text](https://github.com/tuhinbasu/Project_Bonds/blob/main/img/project_arch.PNG)
 
 
 
